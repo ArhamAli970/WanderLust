@@ -1,0 +1,60 @@
+<% layout("layout/boilerplate.ejs")  %>
+<body>
+    <!--  we dont apply require because every browser has default value which will give different thing in different browsers sp we have to apply nonvalidate-->
+    <!-- enctype="multipart/form-data"  used to send pdf files or photo through form -->
+    <!-- npm i multer it is package that is used to handel file data in backend that parse it -->
+    <form action="/listings" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+
+        <div class="mb-3">
+            <label for="form-label">Title</label>
+        <input type="text" name="list[title]" placeholder="enter title" class="form-control" required>
+        <div class="invalid-feedback">Enter Valid tilte</div>
+        </div>
+         
+         <div class="mb-3">
+            <label for="form-label">Description</label>
+        <textarea name="list[description]" class="form-control"  cols="30" rows="10" required>Enter details</textarea>
+        <div class="invalid-feedback">Enter Valid tilte</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="form-label">Image Link</label>
+        <input type="file" name="list[image]"  class="form-control" placeholder="enter URL" required>
+        </div>
+        
+        <div class="mb-3 form-cnt">
+        <label for="form-label">Enter Price</label>
+        <input type="text" name="list[price]" placeholder="enter price" class="form-control" required >
+        <div class="invalid-feedback">Enter Valid Price</div>
+    </div>
+        
+    <div class="mb-3">
+    <label for="form-label">Enter Location</label>
+        <input type="text" name="list[location]" placeholder="enter location" class="form-control" required >
+        <div class="invalid-feedback">Enter Location</div>
+    </div>
+
+    <div class="mb-3">
+        <label for="form-label">Enter Country</label>
+        <input type="text" name="list[country]" placeholder="enter country" class="form-control" required>
+        <div class="invalid-feedback">Enter Country</div>
+    </div> 
+
+        <BR><BR></BR></BR>
+
+    
+
+        <div class="mb-3">
+        <button class="s-btn">Submit</button>
+    </div>
+
+    
+
+    </form>
+</body>
+</html>
+
+
+<!-- <div class="invalid-feedback"></div> ::: this is used to display message ehen we are submittig the form -->
+<!-- novalidate ::: removes default error message of browsers -->
+<!-- class="needs-validation"  ::: use for adding validation form -->

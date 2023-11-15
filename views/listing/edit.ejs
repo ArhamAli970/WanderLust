@@ -1,0 +1,66 @@
+<% layout("layout/boilerplate.ejs") %>
+<body>
+
+    <form action="/listings/<%= listing._id %>?_method=PUT" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+     
+   <div class="frm-Flex">   
+    <div class="mb-3">
+        <label for="tit">Title</label>
+        <br>
+        <input type="text" class="form-control" id="tit" name="list[title]" value=<%=listing.title %> required>
+        <div class="invalid-feedback">Title should be Valid</div>
+    </div>
+    <div class="mb-3">
+        <label for="tit">Description</label>
+        <br>
+        <textarea class="form-control" name="list[description]"  cols="30" rows="10" required> <%=listing.description  %> </textarea>
+        <div class="invalid-feedback">Description not written</div>
+    </div>
+
+    <div class="mb-3">
+        <p>Original Image</p>
+        <img src="<%=originalImageUrl%>" class="card-img-top " alt="img">
+    </div>
+
+    <div class="mb-3">
+        <label for="tit">Upload Image</label>
+        <br>
+        <input class="form-control" type="file" name="list[image]" value=<%=listing.image %>  required>
+        <!-- <div class="invalid-feedback">Enter Location</div> -->
+    </div>
+
+
+    <div class="mb-3">
+        <label  for="tit">Price</label>
+        <br>
+        <input class="form-control" type="text" name="list[price]" value=<%=listing.price %> required>
+        <div class="invalid-feedback">Price should be valid</div>
+    </div>
+
+
+    <div class="mb-3">
+        <label  for="tit">Location</label>
+        <br>
+        <input class="form-control" type="text" name="list[location]" value=<%=listing.location %> required>
+        <div class="invalid-feedback">Enter Valid Location</div>
+    </div>
+
+
+
+    <div class="mb-3">
+        <label for="tit">Country</label>
+        <br>
+        <input class="form-control" type="text" name="list[country]" value=<%=listing.country %> required>
+        <div class="invalid-feedback">Enter Country</div>
+    </div>
+        <BR><BR></BR></BR>
+
+        
+
+    </div>
+    <button class="s-btn">Update</button>
+    </form>
+
+    <!-- <script src="/js/valid.js"></script> -->
+    
+</body>

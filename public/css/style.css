@@ -1,0 +1,140 @@
+body{ 
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    /* color: #222222 !important; */
+}
+.container{ 
+    flex: 1;
+}
+.navbar{ 
+    height: 5rem;
+    position: sticky !important;
+    border-bottom: 0.5px solid #222222;
+    top: 0px ;
+    z-index: 1;
+}
+.fa-compass{ 
+    color: #fe424d;
+    font-size: 2rem;
+
+}
+
+.nav-link{ 
+    color: #222222 !important;
+}
+
+.fa-brands{ 
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.f-info{ 
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.f-info-links a{ 
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{ 
+    text-decoration: underline;
+    color: #222222;
+}
+
+/* footer{ 
+    
+} */
+
+/* # card */
+
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{ 
+    border-radius: 0.5rem !important;
+    height: 20rem !important;
+    object-fit: cover !important;
+    /* color: #222222 !important; */
+}
+
+.ach{ 
+    text-decoration: none;
+     color: #222222;
+}
+
+
+/* Card Effect */
+
+.card-img-overlay{ 
+    opacity: 0;
+}
+.ach:hover{ 
+    color: #222222;
+    
+}
+
+.card-img-overlay:hover{ 
+    opacity: 0.2;
+    background-color: white ;
+}
+
+
+
+.mb-3{ 
+    width: 70% !important;
+    margin: 0px auto;
+    
+}
+/* .form-cnt{ 
+    margin: 0 auto;
+} */
+
+.s-btn{ 
+    background-color:#fe424d !important;
+    border-radius: 0.3rem;
+    border: 1px solid #fe424d;
+    
+}
+
+.frm{ 
+    width: 80%;
+}
+
+.frm-Flex{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.img-show{ 
+    width: 60% !important;
+}
+
+.e-btn{ 
+    background-color: #222222;
+    border-radius: 0.3rem;
+    border: 1px solid #222222;
+    color: #ebebeb;
+    
+}
+
+.edit{ 
+    display: flex;
+}
+
+.cntr{ 
+    text-align: center !important;
+}

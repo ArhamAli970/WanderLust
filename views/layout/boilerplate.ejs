@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/rating.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <%- include("../include/nav.ejs")  %>
+    
+    <!-- <br> -->
+    <div class="container">
+        <%- include("../include/flash.ejs")  %>
+        <%- body %>
+    </div>
+<br>
+    <%- include("../include/footer.ejs") %>
+
+    <script src="/js/valid.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+</body>
+</html>
+
+<!-- 
+The behavior you're observing with EJS's layout function is specific to how EJS-Mate handles layouts and templates. EJS-Mate is an extension of the EJS templating engine that provides additional features, including layout support. EJS-Mate's layout function has some built-in intelligence for resolving the layout path relative to the views folder. This is why you can provide a simpler path like "layouts/boilerplate" without specifying an absolute path.
+
+In contrast, when you use the include function in EJS (or EJS-Mate), you are responsible for specifying the correct path to the included file, and it usually requires an absolute or relative path depending on your project's directory structure. -->
+
+
+<!-- When a path starts with a forward slash ("/"), it signifies that the path should be resolved from the root directory of the web server. So, in the case of src="/js/valid.js", the browser will look for the valid.js file in the /js/ directory at the root of the server.
+
+This is different from a typical relative path like src="js/valid.js", which would be resolved relative to the location of the HTML file that references it. In this case, the browser would look for the valid.js file in a js/ directory located in the same directory as the HTML file. -->
