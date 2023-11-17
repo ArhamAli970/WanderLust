@@ -3,12 +3,16 @@
   .btn-search{ 
     color: #fff;
     background-color: #fe424d;
-    border-radius: 25px;
-    width: 12rem;
+    border-radius: 20px;
+    width: 70%;
   }
   .search{ 
     border-radius: 20px;
     padding: 10px;
+    width: 14rem;
+  }
+  .navbar{ 
+    background-color: whitesmoke;
   }
   .btn-search:hover{ 
     color: #fff;
@@ -18,37 +22,103 @@
   .btn-search i{ 
     margin-left:1rem ;
   }
+  nav{ 
+    height: 5rem;
+    display:  flex;
+    align-items: center;
+    /* justify-content: sp; */
+
+  }
+  .logo{ 
+    display:  flex;
+
+  }
+
+  .cred{ 
+    display:  flex;
+
+  } 
+
+  @media screen and (max-width: 800px) {
+    .logo{ 
+      display:none;
+    } 
+    nav{ 
+      font-size: 1rem;
+    }
+
+
+
+}
+
+@media screen and (max-width: 600px) {
+  
+*{ 
+  font-size: 0.8rem;
+}
+  .btn-search{ 
+   
+    
+    border-radius: 20px;
+    width: 50%;
+  }
+  .search{ 
+    border-radius: 20px;
+    padding: 1px;
+    width: 15rem;
+    height: 3rem;
+  }
+
+
+}
+
+
+@media screen and (max-width: 400px) {
+  
+  *{ 
+    font-size: 0.6rem;
+  }
+    .btn-search{ 
+     
+      
+      border-radius: 20px;
+      width: 40%;
+    }
+    .search{ 
+      border-radius: 20px;
+      padding: 1px;
+      width: 15rem;
+      height: 3rem;
+    }
+  
+  
+  }
+
+
+
+
 </style>
 
-<nav class="navbar navbar-expand-md navbar-light bg-light ">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/"><i class="fa-regular fa-compass "></i></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/listings">Explore</a>
-          </li>
-         
-        
-        </ul>
-      </div>
+<nav class="navbar">
 
-      <div class="navbar-nav ">
-        <form class="d-flex" role="search">
-          <input class="form-control me-2 search" type="search" placeholder="Search Destination" aria-label="Search">
-          <button class="btn btn-search" type="submit">Search <i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
-      </div>
 
-    
+   <div class="logo">
+       
+    <a class="navbar-brand" href="/"><i class="fa-regular fa-compass "></i></a>
+    <a class="nav-link" href="/listings">Explore</a>
 
-    
+   </div>
+
+
+    <div class="search-bar">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2 search" type="search" placeholder="Search Destination" aria-label="Search">
+        <button class="btn btn-search" type="submit">Search <i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
     </div>
 
-    <div class="collapse navbar-collapse ms-auto" id="navbarNav">
+
+    <div class="cred">
 
     
           <a class="nav-link" href="/listings/new">Airbnb</a>

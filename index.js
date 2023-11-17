@@ -103,7 +103,7 @@ passport.deserializeUser(User.deserializeUser());
 
 
 app.use((req,res,next)=>{ 
-// we can access res or req object in ejs so we use res.locals
+// we can't access res or req object in ejs so we use res.locals
     res.locals.message=req.flash("success");
     res.locals.err=req.flash("failure");
     res.locals.currUser=req.user;
@@ -130,12 +130,14 @@ app.all("*",(req,res,next)=>{
     next( new ExpressError(404,"page not found"));
 })
 
+
 app.use((err,req,res,next)=>{ 
     // console.log("yes");
     // console.log(err.message);
     // res.send("something wrong")
     // console.log(err.statusCode);
     let {statusCode=500,message="went wrong"}=err;
+    console.log(message);
 
     res.status(statusCode).render("error.ejs",{message});
 })
