@@ -5,7 +5,7 @@
         <h2 ><%=list.title %></h2>
         <br><br>
         <br>
-        <div class="col-10 offset-2  mb-3" >
+    <div class="col-10 offset-2  mb-3" >
     
   
    
@@ -13,14 +13,15 @@
     
         <img src="<%=list.image.url%>" class="card-img-top " alt="img">
         <div class="card-body">
-          <p class="card-text">
-           <p> <i><%= list.owner.username %></i></p>
-            <p><%= list.description %></p> <br>
-            <p>&#8377;<%= list.price.toLocaleString("en-IN")  %> per Night</p>
-            <p><%= list.location %> </p><br>
-            <p><%= list.country %></p>
-        
-        </p>
+         <div class="card-text">
+            <p><b>Owner Name: </b> <%= list.owner.username %></p>
+            <p><b>About: </b><%= list.description %></p>
+            <p><b>Cost: </b> <%= list.price.toLocaleString("en-IN")  %> per Night</p>
+            <p><b>Location: </b><%=list.locatioon %></p>
+            <p><b>Country: </b><%=list.country %></p>
+         </div>
+         
+
         </div>
       </div>
     </div>
