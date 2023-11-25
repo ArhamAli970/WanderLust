@@ -119,7 +119,7 @@ app.get("/listing/filter",async(req,res)=>{
     let {choose}=req.query
     // console.log(choose)
     let list= await Listing.find({choose:choose});
-    console.log(list);
+
     res.render('listing/index.ejs',{list});
 
 })
