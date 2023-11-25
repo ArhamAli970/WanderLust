@@ -27,7 +27,7 @@ module.exports.renderNewForm=(req,res)=>{
     const list=await Listing.findById(id).populate({path:"reviews",populate:{
         path :"author"
     }}).populate("owner");
-    console.log(list);
+    // console.log(list);
     if(!list){ 
         req.flash("failure","Listing not exist");
         return res.redirect("/login");
@@ -45,14 +45,16 @@ module.exports.createListing=async(req,res,next)=>{
     //  if(!req.body.list){ 
     //     return next( new ExpressError(404,"send valid data"));
     //  }
-    
+
   let url=req.file.path;
   let filename=req.file.filename;
-  console.log(url,"----",filename)
+//   console.log(url,"----",filename)
     let newListing= new Listing(req.body.list);
     newListing.image={url,filename};
     newListing.owner=req.user._id;
     await newListing.save();
+
+    console.log(req.body,req.file); 
 
 //    console.log("df");
     req.flash("success","Listing add Succesfully");

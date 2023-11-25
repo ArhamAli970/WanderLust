@@ -12,6 +12,7 @@ const mongoose=require("mongoose");
 const path= require("path")
 const methodOverride= require("method-override");
 const flash= require("connect-flash");
+const Listing= require("./models_test/listing.js");
 // const multer=require("multer");
 // const {storage}=require("./cloudAnalogy.js")
 // const upload=multer({storage})
@@ -111,7 +112,17 @@ app.use((req,res,next)=>{
     next();
 })
 
+
+
 // console.log("hello");
+app.get("/listing/filter",async(req,res)=>{ 
+    let {choose}=req.query
+    // console.log(choose)
+    let list= await Listing.find({choose:choose});
+    console.log(list);
+    res.render('listing/index.ejs',{list});
+
+})
 
 app.use("/listings",listings);
 app.use("/listings/:id/reviews",review)

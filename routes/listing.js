@@ -19,8 +19,10 @@ router.route("/")
 .post(logIn,upload.single('list[image]'),validateListing,asyncWrap(createListing));
 
 
+
  // Create new Route
  router.get("/new",logIn,renderNewForm);
+
 
 //  router.get(":/id",showListing);
 
@@ -31,7 +33,7 @@ router.route("/:id")
 owner,asyncWrap(deleteListing));
 
 
-
+// ,
 
       
 
